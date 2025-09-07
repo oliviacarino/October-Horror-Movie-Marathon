@@ -22,21 +22,21 @@ html {
     /* keeps aspect ratio while covering */
 }
 
-/* Centered Lightswitch in On state */
+/* Centered Lightswitch in the 'On' state */
 #lightSwitchOn {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* full viewport height */
+    height: 100vh; /* full viewport height */
     text-align: center;
 }
-
-/* Image with doodle wiggle */
 #lightSwitchOn img {
-    /* cap size on big screens */
+    width: 1000vw; /* smaller relative to viewport */
+    max-width: 850px;  /* cap on large screens */
+    height: auto;
+
     animation: doodleWiggle 2s infinite ease-in-out;
     transform-origin: center;
 }
@@ -83,4 +83,11 @@ html {
 
     border-radius: 12px;    
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.285);
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.corner-img:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    /* optional slight zoom */
 }
