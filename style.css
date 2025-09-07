@@ -23,7 +23,7 @@ html {
 }
 
 /* Centered Lightswitch in the 'On' state */
-#lightSwitchOn {
+#lightSwitch {
     position: relative;
     z-index: 1;
     display: flex;
@@ -32,7 +32,7 @@ html {
     height: 100vh; /* full viewport height */
     text-align: center;
 }
-#lightSwitchOn img {
+#lightSwitch img {
     width: 1000vw; /* smaller relative to viewport */
     max-width: 850px;  /* cap on large screens */
     height: auto;
