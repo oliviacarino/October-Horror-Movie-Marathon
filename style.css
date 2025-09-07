@@ -16,6 +16,16 @@ html {
     overflow: hidden;
 }
 
+/* Apply to all headers */
+h1,h2 {
+    font-family: "Dudu Calligraphy -- Life Is Strange", sans-serif;
+}
+
+/* Make <h1> always uppercase */
+h1 {
+    text-transform: uppercase;
+}
+
 .video-background {
     position: fixed;
     top: 0;
@@ -120,6 +130,8 @@ html {
     z-index: 0;
     pointer-events: none;
 }
+
+
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
