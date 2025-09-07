@@ -16,10 +16,23 @@ html {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
-    /* push it behind content */
+    z-index: -2;
+    /* behind overlay and content */
     object-fit: cover;
-    /* keeps aspect ratio while covering */
+}
+
+/* Dark overlay on video only */
+.video-background::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* cover entire viewport */
+    background: rgba(0, 0, 0, 0.4);
+    /* adjust opacity */
+    z-index: -1;
+    /* above video, below content */
+    pointer-events: none;
+    /* allow clicks through */
 }
 
 /* Centered Lightswitch in the 'On' state */
@@ -29,14 +42,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* full viewport height */
+    height: 100vh;
+    /* full viewport height */
     text-align: center;
 }
-#lightSwitch img {
-    width: 1000vw; /* smaller relative to viewport */
-    max-width: 850px;  /* cap on large screens */
-    height: auto;
 
+#lightSwitch img {
+    width: 60vw;    /* smaller, responsive size */
+    max-width: 850px;    /* cap on large screens */
+    height: auto;
     animation: doodleWiggle 2s infinite ease-in-out;
     transform-origin: center;
 }
@@ -72,22 +86,33 @@ html {
     }
 }
 
+/* Top-right clapper image */
 .corner-img {
     position: fixed;
     top: 20px;
     right: 20px;
     width: 16vw;
-    max-width: 70px;    
-    height: auto; /* cap size on big screens */
-    z-index: 2; /* above video */
+    max-width: 70px;
+    height: auto;
+    z-index: 2;
+    /* above overlay and video */
 
-    border-radius: 12px;    
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.285);
 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .corner-img:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
-    /* optional slight zoom */
+    /* subtle zoom */
+}
+
+.dark-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
 }
