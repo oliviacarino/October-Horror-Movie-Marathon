@@ -1,3 +1,12 @@
+/* Fonts :D */
+@font-face {
+    font-family: "Dudu Calligraphy -- Life Is Strange";
+    /* The name you’ll use in CSS */
+    src: url("/assets/fonts/Dudu_Calligraphy.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body,
 html {
     margin: 0;
@@ -7,7 +16,6 @@ html {
     overflow: hidden;
 }
 
-/* Video background */
 .video-background {
     position: fixed;
     top: 0;
@@ -35,27 +43,24 @@ html {
     /* allow clicks through */
 }
 
-/* Centered Lightswitch in the 'On' state */
 #lightSwitch {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* full viewport height */
+    height: 65vh;
     text-align: center;
 }
 
 #lightSwitch img {
-    width: 60vw;    /* smaller, responsive size */
+    width: 90vw;    /* smaller, responsive size */
     max-width: 850px;    /* cap on large screens */
     height: auto;
     animation: doodleWiggle 2s infinite ease-in-out;
     transform-origin: center;
 }
 
-/* Wiggle animation */
 @keyframes doodleWiggle {
     0% {
         transform: rotate(0deg) scale(1);
@@ -86,7 +91,6 @@ html {
     }
 }
 
-/* Top-right clapper image */
 .corner-img {
     position: fixed;
     top: 20px;
@@ -115,4 +119,22 @@ html {
     background: rgba(0, 0, 0, 0.4);
     z-index: 0;
     pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    #lightSwitch {
+        height: auto;
+        /* let container grow if needed */
+        padding: 5vh 0;
+        /* optional spacing top/bottom */
+    }
+
+    #lightSwitch img {
+        width: 178vw;
+        /* make it larger relative to viewport */
+        max-width: 2000px;
+        /* cap for very small screens */
+        height: auto;
+    }
 }
