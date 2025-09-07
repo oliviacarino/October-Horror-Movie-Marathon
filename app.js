@@ -1,35 +1,21 @@
-async function updateFunMovie(subgenre = "fun") {
+async function updateMovie(subgenre) {
     try {
-        // Load the JSON file
         const response = await fetch("/assets/horror_advent_calendar_full.json");
         const calendar = await response.json();
 
-        // Get today's date as "Oct 6" format
+        // TEMP: manual date for testing
+        const today = "Oct 31"; // change to any date in your JSON
         // const now = new Date();
         // const options = { month: "short", day: "numeric" };
-        // const today = now.toLocaleDateString("en-US", options); // e.g. "Oct 6"
-        
-        // TEMPORARY: manually set the date for testing & comment out the above three  const's
-        const today = "Oct 1";  // change this to any date present in your JSON
+        // const today = now.toLocaleDateString("en-US", options);
 
-        // Find the entry for today
         const todayEntry = calendar.find(entry => entry.date === today);
+        if (!todayEntry) return;
 
-        if (!todayEntry) {
-            console.warn("No entry for today:", today);
-            return;
-        }
-
-        // Pick fun or scary
         const genreKey = subgenre.toLowerCase() === "scary" ? "scary" : "fun";
         const movieData = todayEntry[genreKey];
+        if (!movieData) return;
 
-        if (!movieData) {
-            console.warn(`No data for genre '${genreKey}' on ${today}`);
-            return;
-        }
-
-        // Update DOM elements
         const titleEl = document.getElementById("movieTitle");
         const infoEl = document.getElementById("movieInfo");
 
@@ -40,6 +26,41 @@ async function updateFunMovie(subgenre = "fun") {
         console.error("Error loading or processing JSON:", err);
     }
 }
+window.addEventListener("DOMContentLoaded", () => {
+    const lightSwitch = document.getElementById("lightSwitch");
+    const darkOverlay = document.querySelector(".dark-overlay");
 
-// Example usage: pass "fun" or "scary"
-updateFunMovie("fun");
+    if (!lightSwitch) return;
+
+    const currentPath = window.location.pathname;
+    let subgenre = "fun";
+    let nextPage = "off.html";
+
+    if (currentPath.endsWith("off.html")) {
+        subgenre = "scary";
+        nextPage = "index.html";
+
+        // Show dark overlay immediately on off.html
+        if (darkOverlay) {
+            darkOverlay.style.opacity = "1";
+        }
+    }
+
+    // Load movie info immediately
+    updateMovie(subgenre);
+
+    // Click handler for lightswitch
+    lightSwitch.addEventListener("click", () => {
+        if (darkOverlay) {
+            // Fade overlay depending on destination
+            darkOverlay.style.opacity = nextPage === "off.html" ? "1" : "0";
+        }
+
+        // Optional: fade entire page body too
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+            window.location.href = nextPage;
+        }, 400);
+    });
+});
