@@ -1,0 +1,343 @@
+[
+  {
+    "date": "Oct 1",
+    "fun": {
+      "title": "Coraline (2009)",
+      "description": "a child explores a magical “other world.”"
+    },
+    "scary": {
+      "title": "The Witch (2015)",
+      "description": "a family is torn apart by the “other world” of witchcraft."
+    }
+  },
+  {
+    "date": "Oct 2",
+    "fun": {
+      "title": "Beetlejuice (1988)",
+      "description": "mischievous ghosts haunt a house with laughs."
+    },
+    "scary": {
+      "title": "Poltergeist (1982)",
+      "description": "vengeful ghosts haunt a house with terror."
+    }
+  },
+  {
+    "date": "Oct 3",
+    "fun": {
+      "title": "The Addams Family (1991)",
+      "description": "a macabre family full of charm."
+    },
+    "scary": {
+      "title": "Hereditary (2018)",
+      "description": "a cursed family full of doom."
+    }
+  },
+  {
+    "date": "Oct 4",
+    "fun": {
+      "title": "Hocus Pocus (1993)",
+      "description": "goofy witches run amok in Salem."
+    },
+    "scary": {
+      "title": "The Conjuring (2013)",
+      "description": "sinister witchcraft infects a home."
+    }
+  },
+  {
+    "date": "Oct 5",
+    "fun": {
+      "title": "Scooby-Doo on Zombie Island (1998)",
+      "description": "cartoon detectives face “real” monsters."
+    },
+    "scary": {
+      "title": "Sinister (2012)",
+      "description": "a true-crime writer faces “real” supernatural evil."
+    }
+  },
+  {
+    "date": "Oct 6",
+    "fun": {
+      "title": "Goosebumps (2015)",
+      "description": "monsters escape from books."
+    },
+    "scary": {
+      "title": "It Follows (2014)",
+      "description": "a curse escapes from one victim to the next."
+    }
+  },
+  {
+    "date": "Oct 7",
+    "fun": {
+      "title": "Casper (1995)",
+      "description": "a friendly ghost haunts with kindness."
+    },
+    "scary": {
+      "title": "The Others (2001)",
+      "description": "ghostly presences haunt with dread."
+    }
+  },
+  {
+    "date": "Oct 8",
+    "fun": {
+      "title": "Hotel Transylvania (2012)",
+      "description": "monsters gather at a family-friendly getaway."
+    },
+    "scary": {
+      "title": "The Descent (2005)",
+      "description": "monsters gather in a claustrophobic cave."
+    }
+  },
+  {
+    "date": "Oct 9",
+    "fun": {
+      "title": "Monster House (2006)",
+      "description": "a house that’s alive and scary for kids."
+    },
+    "scary": {
+      "title": "The Exorcism of Emily Rose (2005)",
+      "description": "a body becomes a terrifying “house” for a demon."
+    }
+  },
+  {
+    "date": "Oct 10",
+    "fun": {
+      "title": "The Nightmare Before Christmas (1993)",
+      "description": "holiday hijinks in the land of the dead."
+    },
+    "scary": {
+      "title": "The Omen (1976)",
+      "description": "holiday cheer shattered by the arrival of the Antichrist."
+    }
+  },
+  {
+    "date": "Oct 11",
+    "fun": {
+      "title": "Frankenweenie (2012)",
+      "description": "a boy resurrects his beloved pet."
+    },
+    "scary": {
+      "title": "Pet Sematary (1989)",
+      "description": "a father resurrects his beloved child."
+    }
+  },
+  {
+    "date": "Oct 12",
+    "fun": {
+      "title": "ParaNorman (2012)",
+      "description": "a boy can see the dead and must break a curse."
+    },
+    "scary": {
+      "title": "The Ring (2002)",
+      "description": "a cursed tape makes the dead see you."
+    }
+  },
+  {
+    "date": "Oct 13",
+    "fun": {
+      "title": "Creepshow (1982)",
+      "description": "pulpy anthology of gory tales."
+    },
+    "scary": {
+      "title": "Friday the 13th (1980)",
+      "description": "the campfire story come to life."
+    }
+  },
+  {
+    "date": "Oct 14",
+    "fun": {
+      "title": "Young Frankenstein (1974)",
+      "description": "a parody of gothic horror."
+    },
+    "scary": {
+      "title": "The Shining (1980)",
+      "description": "a pinnacle of gothic horror."
+    }
+  },
+  {
+    "date": "Oct 15",
+    "fun": {
+      "title": "Gremlins (1984)",
+      "description": "cute creatures turn into chaos."
+    },
+    "scary": {
+      "title": "Hellraiser (1987)",
+      "description": "mysterious box opens pure chaos."
+    }
+  },
+  {
+    "date": "Oct 16",
+    "fun": {
+      "title": "Corpse Bride (2005)",
+      "description": "love survives into the afterlife."
+    },
+    "scary": {
+      "title": "Rosemary’s Baby (1968)",
+      "description": "love corrupted by the devil."
+    }
+  },
+  {
+    "date": "Oct 17",
+    "fun": {
+      "title": "The Witches (1990)",
+      "description": "witches try to turn kids into mice."
+    },
+    "scary": {
+      "title": "The Mist (2007)",
+      "description": "creatures drive humans into monsters."
+    }
+  },
+  {
+    "date": "Oct 18",
+    "fun": {
+      "title": "Edward Scissorhands (1990)",
+      "description": "an outsider with blades for hands seeks love."
+    },
+    "scary": {
+      "title": "A Nightmare on Elm Street (1984)",
+      "description": "an outsider with blades for hands seeks revenge."
+    }
+  },
+  {
+    "date": "Oct 19",
+    "fun": {
+      "title": "Practical Magic (1998)",
+      "description": "witches struggle with love and family."
+    },
+    "scary": {
+      "title": "Midsommar (2019)",
+      "description": "a commune uses ritual to destroy love and family."
+    }
+  },
+  {
+    "date": "Oct 20",
+    "fun": {
+      "title": "Rocky Horror Picture Show (1975)",
+      "description": "campy, decadent creatures of the night."
+    },
+    "scary": {
+      "title": "Suspiria (1977)",
+      "description": "elegant, decadent witches in a dance academy of death."
+    }
+  },
+  {
+    "date": "Oct 21",
+    "fun": {
+      "title": "Scooby-Doo (2002)",
+      "description": "a masked killer with a campy twist."
+    },
+    "scary": {
+      "title": "Halloween (1978)",
+      "description": "a masked killer with pure terror."
+    }
+  },
+  {
+    "date": "Oct 22",
+    "fun": {
+      "title": "Ghostbusters (1984)",
+      "description": "a team wrangles ghosts with science."
+    },
+    "scary": {
+      "title": "The Blair Witch Project (1999)",
+      "description": "a team is undone by forces beyond science."
+    }
+  },
+  {
+    "date": "Oct 23",
+    "fun": {
+      "title": "The Munsters (2022 or old episodes)",
+      "description": "a family of monsters you’d want next door."
+    },
+    "scary": {
+      "title": "Scream (1996)",
+      "description": "killers who might already live next door."
+    }
+  },
+  {
+    "date": "Oct 24",
+    "fun": {
+      "title": "Curse of the Were-Rabbit (2005)",
+      "description": "Wallace & Gromit tackle a goofy monster."
+    },
+    "scary": {
+      "title": "The Babadook (2014)",
+      "description": "a mother and child are stalked by a terrifying monster."
+    }
+  },
+  {
+    "date": "Oct 25",
+    "fun": {
+      "title": "Little Shop of Horrors (1986)",
+      "description": "man-eating plant sings and schemes."
+    },
+    "scary": {
+      "title": "The Evil Dead (1981)",
+      "description": "forest itself spawns man-eating demons."
+    }
+  },
+  {
+    "date": "Oct 26",
+    "fun": {
+      "title": "Scooby-Doo and the Witch’s Ghost (1999)",
+      "description": "a ghost witch in a cartoon Salem."
+    },
+    "scary": {
+      "title": "The Exorcist (1973)",
+      "description": "a demon inhabits a child in a chilling Georgetown."
+    }
+  },
+  {
+    "date": "Oct 27",
+    "fun": {
+      "title": "Addams Family Values (1993)",
+      "description": "kooky family faces an evil nanny."
+    },
+    "scary": {
+      "title": "Get Out (2017)",
+      "description": "family gathering hides an evil conspiracy."
+    }
+  },
+  {
+    "date": "Oct 28",
+    "fun": {
+      "title": "Dark Shadows (2012)",
+      "description": "a gothic vampire comedy."
+    },
+    "scary": {
+      "title": "The Thing (1982)",
+      "description": "a gothic monster that consumes identity."
+    }
+  },
+  {
+    "date": "Oct 29",
+    "fun": {
+      "title": "Haunted Mansion (2003/2023)",
+      "description": "lighthearted ghost-house ride."
+    },
+    "scary": {
+      "title": "Carrie (1976)",
+      "description": "high school becomes a ghost-house of trauma."
+    }
+  },
+  {
+    "date": "Oct 30",
+    "fun": {
+      "title": "Sleepy Hollow (1999)",
+      "description": "Tim Burton’s stylized headless horseman."
+    },
+    "scary": {
+      "title": "The Thing (1982)",
+      "description": "monstrous threat in isolation (reprise)."
+    }
+  },
+  {
+    "date": "Oct 31",
+    "fun": {
+      "title": "Trick ’r Treat (2007)",
+      "description": "playful anthology of Halloween stories."
+    },
+    "scary": {
+      "title": "Halloween (2018)",
+      "description": "brutal, modern-day version of Halloween horror."
+    }
+  }
+]
