@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         // Optional: fade entire page body too
-        document.body.classList.add("fade-out");
+        // document.body.classList.add("fade-out");
 
         setTimeout(() => {
             window.location.href = nextPage;
