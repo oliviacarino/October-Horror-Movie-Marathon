@@ -2,7 +2,7 @@
 @font-face {
     font-family: "Dudu Calligraphy -- Life Is Strange";
     /* The name you’ll use in CSS */
-    src: url("/assets/fonts/Dudu_Calligraphy.ttf") format("truetype");
+    src: url("assets/fonts/Dudu_Calligraphy.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }

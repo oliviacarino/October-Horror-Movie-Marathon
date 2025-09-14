@@ -1,6 +1,6 @@
 async function updateMovie(subgenre) {
     try {
-        const response = await fetch("/assets/horror_advent_calendar_full.json");
+        const response = await fetch("assets/horror_advent_calendar_full.json");
         const calendar = await response.json();
 
         // TEMP: manual date for testing
