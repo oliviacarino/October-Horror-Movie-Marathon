@@ -4,10 +4,10 @@ async function updateMovie(subgenre) {
         const calendar = await response.json();
 
         // TEMP: manual date for testing
-        const today = "Oct 31"; // change to any date in your JSON
-        // const now = new Date();
-        // const options = { month: "short", day: "numeric" };
-        // const today = now.toLocaleDateString("en-US", options);
+        //const today = "Oct 31"; // change to any date in your JSON
+        const now = new Date();
+        const options = { month: "short", day: "numeric" };
+        const today = now.toLocaleDateString("en-US", options);
 
         const todayEntry = calendar.find(entry => entry.date === today);
         if (!todayEntry) return;
