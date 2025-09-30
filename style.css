@@ -17,7 +17,8 @@ html {
 }
 
 /* Apply to all headers */
-h1,h2 {
+h1,
+h2 {
     font-family: "Dudu Calligraphy -- Life Is Strange", sans-serif;
 }
 
@@ -64,11 +65,43 @@ h1 {
 }
 
 #lightSwitch img {
-    width: 90vw;    /* smaller, responsive size */
-    max-width: 850px;    /* cap on large screens */
+    width: 90vw;
+    /* smaller, responsive size */
+    max-width: 850px;
+    /* cap on large screens */
     height: auto;
     animation: doodleWiggle 2s infinite ease-in-out;
     transform-origin: center;
+}
+
+#lightSwitchContainer {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* horizontal centering */
+    justify-content: center;
+    text-align: center;
+    height: 65vh;
+    /* same as old #lightSwitch */
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+    /* some breathing space */
+}
+
+#movieTexts {
+    margin-top: 2vh;
+    /* space between switch and texts */
+}
+
+#movieTitle {
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+#movieInfo {
+    font-size: 1.8vw;
 }
 
 @keyframes doodleWiggle {
@@ -136,21 +169,118 @@ h1 {
     /* smooth fade */
 }
 
+/* Styling for doodles  */
+.bg-deco {
+    position: fixed;
+    z-index: 0;
+    /* behind content */
+    pointer-events: none;
+    /* so clicks go through */
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.391));
+    /* mix-blend-mode: multiply; */
+}
+
+.top-left {
+    top: 38px;
+    left: 20px;
+    width: 175px;
+}
+
+#tombstone {
+    position: fixed;
+    bottom: 120px;
+    right: 100px;
+    width: 120px;
+    transform: rotate(20deg) scale(1.1) translateX(10px);
+    transform-origin: center center;
+    animation: tombstoneWiggle 1s infinite ease-in-out;
+}
+@keyframes tombstoneWiggle {
+    0% {
+        transform: rotate(15deg) scale(1.1) translateX(10px);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.1) translateX(10px);
+    }
+
+    100% {
+        transform: rotate(15deg) scale(1.1) translateX(10px);
+    }
+}
+
+#pumpkin {
+    transform: rotate(-40deg) scale(1.1) translateX(10px);
+        transform-origin: center center;
+        animation: pumpkinWiggle 1s infinite ease-in-out;
+    opacity: 1;
+}
+
+@keyframes pumpkinWiggle {
+    0% {
+        transform: rotate(-48deg) scale(1.1) translateX(10px);
+    }
+
+    50% {
+        transform: rotate(-40deg) scale(1.1) translateX(10px);
+    }
+
+    100% {
+        transform: rotate(-48deg) scale(1.1) translateX(10px);
+    }
+}
+
 /* ********************************************* */
 /* Mobile adjustments */
 @media (max-width: 600px) {
     #lightSwitch {
         height: auto;
-        /* let container grow if needed */
         padding: 5vh 0;
-        /* optional spacing top/bottom */
     }
 
     #lightSwitch img {
-        width: 178vw;
-        /* make it larger relative to viewport */
-        max-width: 2000px;
-        /* cap for very small screens */
+        width: 90vw;
+        max-width: none;
         height: auto;
+    }
+
+    #movieTitle {
+        font-size: 9vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    #movieInfo {
+        font-size: 6vw;
+        margin-left: 13vw;
+        margin-right: 13vw;
+    }
+
+    #lightSwitchContainer {
+        height: auto;
+        padding: 5vh 0;
+    }
+
+    /* Doodle images smaller & repositioned */
+    .bg-deco {
+        max-width: 25vw;
+    }
+
+    .top-left {
+        top: 10px;
+        left: 10px;
+        width: 60px;
+    }
+
+    #pumpkin {
+        width: 70px;
+        transform: rotate(-40deg) scale(1) translateX(0px);
+    }
+
+    .corner-img {
+        width: 18vw;
+        max-width: 50px;
+        top: 10px;
+        right: 10px;
     }
 }
