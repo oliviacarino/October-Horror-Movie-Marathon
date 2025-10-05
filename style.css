@@ -98,8 +98,8 @@ h1 {
 
 #movieTitle,
 #movieInfo {
-    color: #fddd94;
-    text-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+    color: #06ff9b;
+    text-shadow: 0 0 8px rgba(37, 255, 179, 0.5);
     display: inline-block;
     background: rgba(0, 0, 0, 0.325);
     padding: 0.6em 1.2em;
@@ -182,8 +182,8 @@ h1 {
 
 #tombstone {
     position: fixed;
-    bottom: 120px;
-    right: 100px;
+    bottom: 50px;
+    right: 40px;
     width: 160px;
     transform: rotate(20deg) scale(1.1) translateX(10px);
     transform-origin: center center;
@@ -221,6 +221,43 @@ h1 {
 
     100% {
         transform: rotate(-48deg) scale(1.1) translateX(10px);
+    }
+}
+
+#potion {
+    position: fixed;
+    bottom: 170px;
+    left: 30px;
+    width: 250px;
+    transform: rotate(-10deg) scale(1.05);
+    transform-origin: center center;
+    animation: potionFloat 3s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+#pentegram {
+    position: fixed;
+    bottom: 130px;
+    left: 50px;
+    width: 250px;
+    transform: rotate(-10deg) scale(1.05);
+    transform-origin: center center;
+    animation: potionFloat 3s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+/* Gentle floating animation */
+@keyframes potionFloat {
+    0% {
+        transform: translateY(0px) rotate(-10deg) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(-8deg) scale(1.07);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(-10deg) scale(1.05);
     }
 }
 
@@ -269,10 +306,18 @@ h1 {
     #pumpkin {
         width: 70px;
         transform: rotate(-40deg) scale(1) translateX(0px);
+        top: 50px;
+        left: 20px;
     }
 
     #tombstone {
         width: 100px;
+    }
+
+    #potion {
+        width: 100px;
+        bottom: 90px;
+        left: 30px;
     }
 
     .corner-img {
