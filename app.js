@@ -56,11 +56,55 @@ window.addEventListener("DOMContentLoaded", () => {
             darkOverlay.style.opacity = nextPage === "off.html" ? "1" : "0";
         }
 
-        // Optional: fade entire page body too
-        // document.body.classList.add("fade-out");
-
         setTimeout(() => {
             window.location.href = nextPage;
         }, 400);
     });
+});
+
+// Update list of announced movies so far
+async function loadAnnouncedMovies() {
+    try {
+        const response = await fetch("assets/horror_advent_calendar_full.json");
+        const calendar = await response.json();
+
+        const now = new Date();
+        const options = { month: "short", day: "numeric" };
+        const today = now.toLocaleDateString("en-US", options);
+
+        // Convert today's date into a comparable form
+        const announcedMovies = calendar.filter(entry => {
+            const entryDate = new Date(`${entry.date}, 2025`); // assumes year 2025
+            return entryDate <= now;
+        });
+
+        const listEl = document.getElementById("movieList");
+        if (!listEl) return;
+
+        announcedMovies.forEach(entry => {
+            const li = document.createElement("li");
+            li.classList.add("movie-entry");
+
+            const scary = entry.scary ? entry.scary.title : null;
+            const fun = entry.fun ? entry.fun.title : null;
+
+            li.innerHTML = `
+                <strong>${entry.date}</strong> ~ 
+                ${fun ? `${fun}` : ""}
+                ${scary && fun ? " / " : ""}
+                ${scary ? `${scary}` : ""}
+            `;
+            listEl.appendChild(li);
+        });
+
+    } catch (err) {
+        console.error("Error loading movie list:", err);
+    }
+}
+
+// Run it if #movieList exists (on the page that shows the list)
+window.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("movieList")) {
+        loadAnnouncedMovies();
+    }
 });

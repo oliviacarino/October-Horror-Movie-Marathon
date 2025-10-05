@@ -98,8 +98,8 @@ h1 {
 
 #movieTitle,
 #movieInfo {
-    color: #06ff9b;
-    text-shadow: 0 0 8px rgba(37, 255, 179, 0.5);
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(237, 41, 19, 0.65);
     display: inline-block;
     background: rgba(0, 0, 0, 0.325);
     padding: 0.6em 1.2em;
@@ -261,6 +261,42 @@ h1 {
     }
 }
 
+#announcedMovies {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fffdf8;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    padding: 1.5em;
+    margin: 4em auto;
+    width: 70%;
+    max-width: 600px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#announcedMovies h2 {
+    margin-bottom: 0.3em;
+    font-family: "Dudu Calligraphy -- Life Is Strange", sans-serif;
+    font-size: 4.5vw;
+}
+
+#movieList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-family: "Dudu Calligraphy -- Life Is Strange", sans-serif;
+}
+
+.movie-entry {
+    font-size: 2.2vw;
+    margin: 0.6em 0;
+    text-shadow: 0 0 6px rgba(255, 140, 0, 0.4);
+    text-align: left;
+}
+
 /* **************** Mobile View **************** */
 @media (max-width: 600px) {
     #lightSwitch {
@@ -325,5 +361,13 @@ h1 {
         max-width: 50px;
         top: 10px;
         right: 10px;
+    }
+
+    #announcedMovies h2 {
+        font-size: 6vw;
+    }
+
+    .movie-entry {
+        font-size: 4.5vw;
     }
 }
