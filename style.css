@@ -1,7 +1,6 @@
 /* Fonts :D */
 @font-face {
     font-family: "Dudu Calligraphy -- Life Is Strange";
-    /* The name you’ll use in CSS */
     src: url("assets/fonts/Dudu_Calligraphy.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
@@ -16,13 +15,11 @@ html {
     overflow: hidden;
 }
 
-/* Apply to all headers */
 h1,
 h2 {
     font-family: "Dudu Calligraphy -- Life Is Strange", sans-serif;
 }
 
-/* Make <h1> always uppercase */
 h1 {
     text-transform: uppercase;
 }
@@ -36,7 +33,6 @@ h1 {
     width: auto;
     height: auto;
     z-index: -2;
-    /* behind overlay and content */
     object-fit: cover;
 }
 
@@ -45,13 +41,9 @@ h1 {
     content: "";
     position: fixed;
     inset: 0;
-    /* cover entire viewport */
     background: rgba(0, 0, 0, 0.4);
-    /* adjust opacity */
     z-index: -1;
-    /* above video, below content */
     pointer-events: none;
-    /* allow clicks through */
 }
 
 #lightSwitch {
@@ -66,9 +58,7 @@ h1 {
 
 #lightSwitch img {
     width: 90vw;
-    /* smaller, responsive size */
     max-width: 850px;
-    /* cap on large screens */
     height: auto;
     animation: doodleWiggle 2s infinite ease-in-out;
     transform-origin: center;
@@ -79,29 +69,43 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* horizontal centering */
     justify-content: center;
     text-align: center;
     height: 65vh;
-    /* same as old #lightSwitch */
     position: relative;
     z-index: 1;
     padding: 20px 0;
-    /* some breathing space */
-}
-
-#movieTexts {
-    margin-top: 2vh;
-    /* space between switch and texts */
+    margin-bottom: -6em;
 }
 
 #movieTitle {
-    font-size: 3vw;
+    font-size: 4vw;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 #movieInfo {
     font-size: 1.8vw;
+}
+
+#movieTexts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    text-align: center;
+}
+
+#movieTitle,
+#movieInfo {
+    color: #fddd94;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.325);
+    padding: 0.6em 1.2em;
+    margin: 0.3em;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
 }
 
 @keyframes doodleWiggle {
@@ -142,18 +146,14 @@ h1 {
     max-width: 70px;
     height: auto;
     z-index: 2;
-    /* above overlay and video */
-
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.285);
-
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .corner-img:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
-    /* subtle zoom */
 }
 
 .dark-overlay {
@@ -162,22 +162,16 @@ h1 {
     background: rgba(0, 0, 0, 0.4);
     z-index: 0;
     pointer-events: none;
-
     opacity: 0;
-    /* default hidden */
     transition: opacity 0.4s ease;
-    /* smooth fade */
 }
 
 /* Styling for doodles  */
 .bg-deco {
     position: fixed;
     z-index: 0;
-    /* behind content */
     pointer-events: none;
-    /* so clicks go through */
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.391));
-    /* mix-blend-mode: multiply; */
 }
 
 .top-left {
@@ -190,7 +184,7 @@ h1 {
     position: fixed;
     bottom: 120px;
     right: 100px;
-    width: 120px;
+    width: 160px;
     transform: rotate(20deg) scale(1.1) translateX(10px);
     transform-origin: center center;
     animation: tombstoneWiggle 1s infinite ease-in-out;
@@ -230,8 +224,7 @@ h1 {
     }
 }
 
-/* ********************************************* */
-/* Mobile adjustments */
+/* **************** Mobile View **************** */
 @media (max-width: 600px) {
     #lightSwitch {
         height: auto;
@@ -239,13 +232,14 @@ h1 {
     }
 
     #lightSwitch img {
-        width: 90vw;
+        width: 130vw;
         max-width: none;
         height: auto;
+        margin-bottom: -2em;
     }
 
     #movieTitle {
-        font-size: 9vw;
+        font-size: 8vw;
         margin-left: 15vw;
         margin-right: 15vw;
     }
@@ -275,6 +269,10 @@ h1 {
     #pumpkin {
         width: 70px;
         transform: rotate(-40deg) scale(1) translateX(0px);
+    }
+
+    #tombstone {
+        width: 100px;
     }
 
     .corner-img {
